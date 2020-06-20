@@ -1,0 +1,7 @@
+{
+  "name": "soundApi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

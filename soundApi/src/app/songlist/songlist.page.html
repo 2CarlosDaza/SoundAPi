@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>songlist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-card >
+          <ion-item >
+            <ion-label>
+              nombre
+            </ion-label>
+            <ion-label>
+              escuchas
+            </ion-label>
+            <ion-label>
+              reproducciones
+            </ion-label>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-list>
+          <ion-card *ngFor= "let any of tracks" >
+            <ion-item >
+              <ion-label>
+                {{any["name"]}}
+              </ion-label>
+              <ion-label>
+                {{any["listeners"]}}
+              </ion-label>
+              <ion-label>
+                {{any["playcount"]}}
+              </ion-label>
+            </ion-item>
+          </ion-card>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
