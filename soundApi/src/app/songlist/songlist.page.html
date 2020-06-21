@@ -26,16 +26,19 @@
     <ion-row>
       <ion-col size-md="6" offset-md="3">
         <ion-list>
-          <ion-card *ngFor= "let any of tracks" >
+          <ion-card *ngFor = "let song of track;" (click)="details(song.name,song.listeners,song.playcount,imagen,song.artist.name)">
             <ion-item >
+              <ion-avatar slot="start">
+                  <img src="{{imagen}}">
+              </ion-avatar>
               <ion-label>
-                {{any["name"]}}
+                <h1>{{song.name}}</h1>
               </ion-label>
               <ion-label>
-                {{any["listeners"]}}
+                <h1>{{song.listeners}}</h1>
               </ion-label>
               <ion-label>
-                {{any["playcount"]}}
+                <h1>{{song.playcount}}</h1>
               </ion-label>
             </ion-item>
           </ion-card>

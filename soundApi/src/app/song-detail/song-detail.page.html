@@ -4,6 +4,27 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="ion-text-center">
+  <ion-grid >
+    <ion-row>
+      <ion-col >
+        <img [src]="image">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-item>
+            <h2>Titulo: {{name}}</h2>  
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <h2>Artista: {{artist}}</h2>
+          <h2>Escuchas: {{listeners}}</h2>
+          <h2>Reproducciones: {{count}}</h2>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
